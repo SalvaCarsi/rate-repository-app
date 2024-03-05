@@ -1,6 +1,6 @@
-import { View, Text } from "react-native";
+import { View, Text } from "react-native"
 
-import repositories from "../data/repositories.js";
+import repositories from "../data/repositories.js"
 
 const RepositoryList = () => {
   return (
@@ -17,10 +17,10 @@ const RepositoryList = () => {
             <Text>Review: {repo.reviewCount}</Text>
             <Text>Rating: {repo.ratingAverage}</Text>
           </View>
-        );
+        )
       })}
     </View>
-  );
-};
+  )
+}
 
-export default RepositoryList;
+export default RepositoryList
