@@ -1,12 +1,9 @@
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
-const RepositoryItem = (item) => {
+const RepositoryItem = ({ item }) => {
   return (
-    <View
-      key={item.id}
-      style={{ padding: 20, paddingBottom: 5, paddingTop: 5 }}
-    >
-      <Text style={{ fontWeight: 'bold', marginBottom: 5 }}>id: {item.id}</Text>
+    <View key={item.id} style={styles.container}>
+      <Text style={styles.strong}>id: {item.id}</Text>
       <Text>Fullname: {item.fullName}</Text>
       <Text>Description: {item.description}</Text>
       <Text>Language: {item.language}</Text>
@@ -17,5 +14,10 @@ const RepositoryItem = (item) => {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: { padding: 20, paddingBottom: 5, paddingTop: 5 },
+  strong: { color: '#09f', fontWeight: 'bold', marginBottom: 5 },
+})
 
 export default RepositoryItem
