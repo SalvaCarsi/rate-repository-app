@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View, TouchableWithoutFeedback, Alert } from 'react-native';
+import { Text, View } from 'react-native'
+import Constants from 'expo-constants'
 
 const Main = () => {
   return (
-    <View>
+    <View style={ { marginTop: Constants.statusBarHeight, flexGrow: 1 } }>
       <Text>Rate Repository Application</Text>
     </View>
   )
