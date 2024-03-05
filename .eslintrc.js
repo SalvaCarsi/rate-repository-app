@@ -1,7 +1,8 @@
 module.exports = {
   root: true,
-  extends: ["universe/native"],
+  extends: ['universe/native'],
   rules: {
-    semi: ["error", "never"],
+    semi: ['error', 'never'],
+    quotes: ['error', 'single'],
   },
-};
+}

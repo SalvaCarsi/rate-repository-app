@@ -8,7 +8,7 @@ export default [
     stargazersCount: 52869,
     ratingAverage: 0,
     reviewCount: 0,
-    ownerAvatarUrl: 'https://avatars.githubusercontent.com/u/1561955?v=4'
+    ownerAvatarUrl: 'https://avatars.githubusercontent.com/u/1561955?v=4',
   },
   {
     id: 'jaredpalmer.formik',
@@ -19,7 +19,7 @@ export default [
     stargazersCount: 21553,
     ratingAverage: 88,
     reviewCount: 4,
-    ownerAvatarUrl: 'https://avatars2.githubusercontent.com/u/4060187?v=4'
+    ownerAvatarUrl: 'https://avatars2.githubusercontent.com/u/4060187?v=4',
   },
   {
     id: 'rails.rails',
@@ -30,7 +30,7 @@ export default [
     stargazersCount: 45377,
     ratingAverage: 100,
     reviewCount: 2,
-    ownerAvatarUrl: 'https://avatars1.githubusercontent.com/u/4223?v=4'
+    ownerAvatarUrl: 'https://avatars1.githubusercontent.com/u/4223?v=4',
   },
   {
     id: 'django.django',
@@ -41,7 +41,7 @@ export default [
     stargazersCount: 48496,
     ratingAverage: 73,
     reviewCount: 5,
-    ownerAvatarUrl: 'https://avatars2.githubusercontent.com/u/27804?v=4'
+    ownerAvatarUrl: 'https://avatars2.githubusercontent.com/u/27804?v=4',
   },
   {
     id: 'reduxjs.redux',
@@ -52,6 +52,6 @@ export default [
     stargazersCount: 52869,
     ratingAverage: 0,
     reviewCount: 0,
-    ownerAvatarUrl: 'https://avatars3.githubusercontent.com/u/13142323?v=4'
-  }
+    ownerAvatarUrl: 'https://avatars3.githubusercontent.com/u/13142323?v=4',
+  },
 ]
