@@ -8,6 +8,7 @@ const StyledText = ({
   fontSize,
   fontWeight,
   style,
+  align,
   ...restOfProps
 }) => {
   const textStyles = [
@@ -16,6 +17,7 @@ const StyledText = ({
     color === 'secondary' && styles.secondary,
     fontSize === 'subheading' && styles.subHeading,
     fontWeight === 'bold' && styles.bold,
+    align === 'center' && styles.textAlignCenter,
   ]
   return (
     <Text style={textStyles} {...restOfProps}>
@@ -42,6 +44,9 @@ const styles = StyleSheet.create({
   },
   subHeading: {
     fontSize: theme.fontSizes.subHeading,
+  },
+  textAlignCenter: {
+    textAlign: 'center',
   },
 })
 

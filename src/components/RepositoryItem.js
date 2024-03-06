@@ -1,5 +1,6 @@
 import { View, StyleSheet } from 'react-native'
 
+import RepositoryStats from './RepositoryStats'
 import StyledText from './StyledText'
 
 const RepositoryItem = ({ item }) => {
@@ -10,10 +11,7 @@ const RepositoryItem = ({ item }) => {
       </StyledText>
       <StyledText>{item.description}</StyledText>
       <StyledText>{item.language}</StyledText>
-      <StyledText>Stars: {item.stargazersCount}</StyledText>
-      <StyledText>Forks: {item.forksCount}</StyledText>
-      <StyledText>Review: {item.reviewCount}</StyledText>
-      <StyledText>Rating: {item.ratingAverage}</StyledText>
+      <RepositoryStats {...item} />
     </View>
   )
 }
