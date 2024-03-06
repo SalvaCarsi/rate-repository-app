@@ -10,24 +10,28 @@ const RepositoryStats = (item) => {
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
       <View>
-        <StyledText fontWeight="bold">Stars</StyledText>
-        <StyledText align="center">
+        <StyledText fontWeight="bold" align="center">
           {parseThousands(item.stargazersCount)}
         </StyledText>
+        <StyledText align="center">Stars</StyledText>
       </View>
       <View>
-        <StyledText fontWeight="bold">Forks</StyledText>
-        <StyledText align="center">
+        <StyledText fontWeight="bold" align="center">
           {parseThousands(item.forksCount)}
         </StyledText>
+        <StyledText align="center">Forks</StyledText>
       </View>
       <View>
-        <StyledText fontWeight="bold">Review</StyledText>
-        <StyledText align="center">{item.reviewCount}</StyledText>
+        <StyledText fontWeight="bold" align="center">
+          {item.reviewCount}
+        </StyledText>
+        <StyledText align="center">Review</StyledText>
       </View>
       <View>
-        <StyledText fontWeight="bold">Rating</StyledText>
-        <StyledText align="center">{item.ratingAverage}</StyledText>
+        <StyledText fontWeight="bold" align="center">
+          {item.ratingAverage}
+        </StyledText>
+        <StyledText align="center">Rating</StyledText>
       </View>
     </View>
   )
