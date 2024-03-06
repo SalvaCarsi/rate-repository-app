@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, Image } from 'react-native'
 
 import RepositoryStats from './RepositoryStats'
 import StyledText from './StyledText'
@@ -7,6 +7,7 @@ import theme from '../theme'
 const RepositoryItem = ({ item }) => {
   return (
     <View key={item.id} style={styles.container}>
+      <Image style={styles.image} source={{ uri: item.ownerAvatarUrl }} />
       <StyledText fontWeight="bold" fontSize="subheading">
         {item.fullName}
       </StyledText>
@@ -26,6 +27,11 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     borderRadius: 4,
     overflow: 'hidden',
+  },
+  image: {
+    width: 48,
+    height: 48,
+    borderRadius: 4,
   },
 })
 
