@@ -18,6 +18,7 @@ const StyledText = ({
     fontSize === 'subheading' && styles.subHeading,
     fontWeight === 'bold' && styles.bold,
     align === 'center' && styles.textAlignCenter,
+    style,
   ]
   return (
     <Text style={textStyles} {...restOfProps}>
