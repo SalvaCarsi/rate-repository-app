@@ -3,6 +3,7 @@ import { NativeRouter, Route, Routes } from 'react-router-native'
 
 import AppBar from './AppBar'
 import RepositoryList from './RepositoryList'
+import Login from '../pages/Login'
 
 const Main = () => {
   return (
@@ -11,7 +12,7 @@ const Main = () => {
         <AppBar />
         <Routes>
           <Route path="/" exact element={<RepositoryList />} />
-          <Route path="/signin" exact element={<Text>Working on it!</Text>} />
+          <Route path="/signin" exact element={<Login />} />
         </Routes>
       </View>
     </NativeRouter>
