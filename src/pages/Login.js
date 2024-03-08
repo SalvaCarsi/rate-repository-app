@@ -1,6 +1,7 @@
 import { Formik, useField } from 'formik'
 import { Button, View, StyleSheet } from 'react-native'
 
+import StyledText from '../components/StyledText'
 import StyledTextInput from '../components/StyledTextInput'
 
 const initialValues = {
@@ -9,20 +10,31 @@ const initialValues = {
 }
 
 const styles = StyleSheet.create({
+  error: {
+    color: 'red',
+    fontSize: 12,
+    marginBottom: 20,
+    marginTop: -5,
+    marginLeft: 12,
+  },
   form: {
     margin: 12,
   },
 })
 
 const FormikInputValue = ({ name, ...props }) => {
-  const [field, , helpers] = useField(name)
+  const [field, meta, helpers] = useField(name)
 
   return (
-    <StyledTextInput
-      value={field.value}
-      onChangeText={(value) => helpers.setValue(value)}
-      {...props}
-    />
+    <>
+      <StyledTextInput
+        value={field.value}
+        onChangeText={(value) => helpers.setValue(value)}
+        error={meta.error}
+        {...props}
+      />
+      {meta.error && <StyledText style={styles.error}>{meta.error}</StyledText>}
+    </>
   )
 }
 
