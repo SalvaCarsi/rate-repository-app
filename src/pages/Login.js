@@ -3,6 +3,7 @@ import { Button, View, StyleSheet } from 'react-native'
 
 import StyledText from '../components/StyledText'
 import StyledTextInput from '../components/StyledTextInput'
+import * as validationSchemas from '../validationSchemas/login'
 
 const initialValues = {
   email: '',
@@ -38,25 +39,12 @@ const FormikInputValue = ({ name, ...props }) => {
   )
 }
 
-const validate = (values) => {
-  const errors = {}
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
-  if (!values.email) {
-    errors.email = 'Email is required'
-  } else if (!emailPattern.test(values.email)) {
-    errors.email = 'Invalid email address'
-  }
-
-  return errors
-}
-
 const Login = () => {
   return (
     <Formik
       initialValues={initialValues}
       onSubmit={(values) => console.log(values)}
-      validate={validate}
+      validationSchema={validationSchemas.loginValidationSchema}
     >
       {({ handleSubmit }) => {
         return (
