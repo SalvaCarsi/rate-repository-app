@@ -6,7 +6,7 @@ import RepositoryItem from './RepositoryItem'
 const RepositoryList = () => {
   const [repositories, setRepositories] = useState(null)
   const fetchRepositories = async () => {
-    fetch('http://localhost:4000/graphql', {
+    globalThis.fetch('http://localhost:4000/graphql', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
